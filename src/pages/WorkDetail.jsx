@@ -1,34 +1,62 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { SITE_CONTENT } from '../data/content';
+import { fetchContent, getLocalizedField } from '../utils/api';
 import SEO from '../components/SEO';
-import { ArrowLeft, ExternalLink, Cpu, Layout, Users, BarChart } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Cpu, Layout, Users, BarChart, Loader2 } from 'lucide-react';
 
 const WorkDetail = () => {
   const { id } = useParams();
-  const { t } = useTranslation();
-  
-  const project = SITE_CONTENT.portfolio.find(p => p.id === id);
-  const localized = t(`projects.${id}`, { returnObjects: true });
+  const { t, i18n } = useTranslation();
+  const [project, setProject] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadProject = async () => {
+      setLoading(true);
+      const data = await fetchContent('portfolio');
+      const found = data.find(p => p.id === id);
+      setProject(found);
+      setLoading(false);
+    };
+    loadProject();
+  }, [id, i18n.language]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-surface">
+        <Loader2 className="w-12 h-12 text-primary animate-spin" />
+      </div>
+    );
+  }
 
   if (!project) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-surface">
-        <h1 className="font-headline font-black text-4xl mb-8 uppercase italic">Project Not Found</h1>
-        <Link to="/portfolio" className="bg-primary text-white px-8 py-3 rounded-full font-label text-xs uppercase tracking-widest">
-          Back to Work
+      <div className="min-h-screen flex flex-col items-center justify-center bg-surface text-center px-4">
+        <h1 className="font-headline font-black text-4xl mb-8 uppercase italic">{t('errors.project_not_found') || 'Project Not Found'}</h1>
+        <Link to="/portfolio" className="bg-primary text-white px-8 py-3 rounded-full font-label text-xs uppercase tracking-widest hover:bg-primary-dark transition-all">
+          {t('common.back_to_work') || 'Back to Work'}
         </Link>
       </div>
     );
   }
 
+  // Helper for arrays (techStack/features) if they are stored as strings in DB
+  const parseList = (val, defaults = []) => {
+    if (!val) return defaults;
+    if (Array.isArray(val)) return val;
+    return val.split(',').map(s => s.trim());
+  };
+
+  const techStack = parseList(project.tech_stack || project.techStack, ['Engineering', 'Design', 'Strategy']);
+  const features = parseList(project.features, ['Dynamic Node', 'Scalable Architecture', 'Encrypted Flow']);
+
   return (
     <div className="bg-surface min-h-screen">
       <SEO 
-        title={`${project.title} | ${t('nav.work')}`}
-        description={project.description}
+        title={`${getLocalizedField(project, 'title')} | ${t('nav.work')}`}
+        description={getLocalizedField(project, 'description')}
       />
 
       {/* Hero Section */}
@@ -38,7 +66,7 @@ const WorkDetail = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           src={project.image} 
-          alt={project.title}
+          alt={getLocalizedField(project, 'title')}
           className="w-full h-full object-cover grayscale opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent" />
@@ -54,7 +82,7 @@ const WorkDetail = () => {
               {t('nav.work')}
             </Link>
             <h1 className="font-headline font-black text-7xl md:text-9xl tracking-tighter text-on-surface uppercase italic leading-[0.85]">
-              {project.title}
+              {getLocalizedField(project, 'title')}
             </h1>
           </motion.div>
         </div>
@@ -65,7 +93,7 @@ const WorkDetail = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
           <div>
             <p className="font-label text-[10px] text-on-surface/30 uppercase tracking-[0.3em] mb-2 italic">Category</p>
-            <p className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">{project.category}</p>
+            <p className="font-headline font-bold text-lg text-on-surface group-hover:text-primary transition-colors">{getLocalizedField(project, 'category')}</p>
           </div>
           <div>
             <p className="font-label text-[10px] text-on-surface/30 uppercase tracking-[0.3em] mb-2 italic">Year</p>
@@ -73,11 +101,11 @@ const WorkDetail = () => {
           </div>
           <div>
             <p className="font-label text-[10px] text-on-surface/30 uppercase tracking-[0.3em] mb-2 italic">Industry</p>
-            <p className="font-headline font-bold text-lg text-on-surface">Enterprise</p>
+            <p className="font-headline font-bold text-lg text-on-surface">{t('common.enterprise') || 'Enterprise'}</p>
           </div>
           <div>
             <p className="font-label text-[10px] text-on-surface/30 uppercase tracking-[0.3em] mb-2 italic">Role</p>
-            <p className="font-headline font-bold text-lg text-on-surface">Digital Lead</p>
+            <p className="font-headline font-bold text-lg text-on-surface">{t('common.digital_lead') || 'Digital Lead'}</p>
           </div>
         </div>
       </section>
@@ -88,10 +116,10 @@ const WorkDetail = () => {
           
           <div className="lg:col-span-12">
             <h2 className="font-headline font-black text-4xl md:text-5xl tracking-tighter text-on-surface mb-12 uppercase italic">
-              The Evolution of <span className="text-autograph-gradient">{project.title}</span>
+              {t('portfolio.evolution_of') || 'The Evolution of'} <span className="text-autograph-gradient">{getLocalizedField(project, 'title')}</span>
             </h2>
             <p className="text-2xl text-secondary font-light leading-relaxed mb-24 max-w-4xl italic">
-              {project.story}
+              {getLocalizedField(project, 'story')}
             </p>
           </div>
 
@@ -101,8 +129,8 @@ const WorkDetail = () => {
                  <div className="w-12 h-px bg-primary" />
                  <h3 className="font-label text-xs tracking-[0.4em] uppercase text-primary font-black italic">The Challenge</h3>
               </div>
-              <p className="text-xl text-on-surface/70 leading-relaxed font-light">
-                {localized.challenge}
+              <p className="text-xl text-on-surface/70 leading-relaxed font-light whitespace-pre-line">
+                {getLocalizedField(project, 'challenge')}
               </p>
             </div>
 
@@ -111,12 +139,12 @@ const WorkDetail = () => {
                  <div className="w-12 h-px bg-primary" />
                  <h3 className="font-label text-xs tracking-[0.4em] uppercase text-primary font-black italic">Our Solution</h3>
               </div>
-              <p className="text-xl text-on-surface/70 leading-relaxed font-light mb-12">
-                {localized.solution}
+              <p className="text-xl text-on-surface/70 leading-relaxed font-light mb-12 whitespace-pre-line">
+                {getLocalizedField(project, 'solution')}
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {project.features.map((feature, i) => (
+                {features.map((feature, i) => (
                   <div key={i} className="p-6 bg-on-surface/5 border border-on-surface/5 rounded-xl flex items-center gap-4 group hover:bg-on-surface/10 transition-all">
                     <div className="w-2 h-2 rounded-full bg-primary" />
                     <span className="text-sm text-on-surface/80 font-medium tracking-wide">{feature}</span>
@@ -135,7 +163,7 @@ const WorkDetail = () => {
                    <BarChart className="w-32 h-32" />
                 </div>
                 <p className="text-2xl text-primary font-bold leading-relaxed relative z-10 italic">
-                  {localized.result}
+                  {getLocalizedField(project, 'result')}
                 </p>
               </div>
             </div>
@@ -145,7 +173,7 @@ const WorkDetail = () => {
              <div className="p-10 bg-surface-container-low border border-on-surface/10 rounded-3xl">
                <h4 className="font-headline font-black text-xl text-on-surface mb-8 uppercase tracking-widest italic">Tech Stack</h4>
                <div className="flex flex-col gap-6">
-                 {project.techStack.map((tech, i) => (
+                 {techStack.map((tech, i) => (
                    <div key={i} className="flex justify-between items-center pb-4 border-b border-on-surface/5 group">
                       <span className="text-on-surface/60 font-light tracking-widest group-hover:text-primary transition-colors">{tech}</span>
                       <Cpu className="w-4 h-4 text-on-surface/20 group-hover:rotate-90 transition-transform" />

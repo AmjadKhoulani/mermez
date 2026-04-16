@@ -9,11 +9,7 @@ const ServicesPage = () => {
 
   return (
     <div className="px-8 md:px-16 lg:px-24 py-24 bg-surface min-h-screen">
-      <SEO 
-        title={t('seo.services.title')}
-        description={t('seo.services.description')}
-        keywords={t('seo.services.keywords')}
-      />
+      <SEO pageKey="services" />
       <div className="max-w-7xl mx-auto">
         <header className="mb-32">
           <p className="font-label text-xs text-primary mb-6 tracking-[0.3em] uppercase">{t('sections.capabilities')}</p>

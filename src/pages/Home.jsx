@@ -14,11 +14,7 @@ const Home = () => {
 
   return (
     <main className="w-full">
-      <SEO 
-        title={t('seo.home.title')}
-        description={t('seo.home.description')}
-        keywords={t('seo.home.keywords')}
-      />
+      <SEO pageKey="home" />
       <Hero />
       <Services />
       <AISection />

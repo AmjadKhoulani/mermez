@@ -8,11 +8,7 @@ const ContactPage = () => {
 
   return (
     <div className="px-8 md:px-16 lg:px-24 py-24 bg-surface min-h-screen">
-      <SEO 
-        title={t('seo.contact.title')}
-        description={t('seo.contact.description')}
-        keywords={t('seo.contact.keywords')}
-      />
+      <SEO pageKey="contact" />
       <div className="max-w-7xl mx-auto">
         <header className="mb-32">
           <p className="font-label text-xs text-primary mb-6 tracking-[0.3em] uppercase">{t('nav.contact')}</p>

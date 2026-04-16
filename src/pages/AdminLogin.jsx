@@ -13,16 +13,24 @@ const AdminLogin = ({ onLogin }) => {
     setLoading(true);
     setError('');
 
-    // For now, let's simulate login with the default credentials
-    // Later we will connect this to the PHP API
-    setTimeout(() => {
-      if (username === 'admin' && password === 'admin123') {
+    try {
+      const response = await fetch('/api/login.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      });
+      const data = await response.json();
+      
+      if (data.success) {
         onLogin(true);
       } else {
-        setError('Invalid identifier or access key.');
-        setLoading(false);
+        setError(data.error || 'Invalid identifier or access key.');
       }
-    }, 1000);
+    } catch (err) {
+      setError('Connection to node failed.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
