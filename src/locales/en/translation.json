@@ -1,0 +1,136 @@
+{
+  "nav": {
+    "home": "Home",
+    "work": "Work",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Start Project"
+  },
+  "hero": {
+    "tagline": "Technical Design Studio",
+    "headline": "CRAFTING THE",
+    "headlineAccent": "TECHNICAL",
+    "headlineEnd": "AUTOGRAPH.",
+    "description": "Architecture for the digital age. We translate complex engineering into fluid, human-centric interfaces that drive meaningful impact and global reach.",
+    "cta": "Explore Case Studies"
+  },
+  "sections": {
+    "works": "Selected Works",
+    "worksSub": "/ 2024 Portfolio",
+    "capabilities": "Core Competencies",
+    "capabilitiesTitle": "ENGINEERING THE UNSEEN LAYERS.",
+    "methodology": "Our Methodology",
+    "methodologyTitle": "DATA AS AN ART FORM.",
+    "methodologyDesc": "We don't just hide technical complexity—we celebrate it. Our designs use technical metadata as decorative motifs to establish authority and transparency."
+  },
+  "about": {
+    "marqueeText": "DESIGN CORE • TECHNICAL PRECISION • DIGITAL INNOVATION • GLOBAL NODES",
+    "headline": "WE SOLVE YOUR",
+    "headlineAccent": "BRAND PUZZLES",
+    "description": "Mermez Lab is not a traditional agency; we are a full-service digital laboratory gathering the best engineers and designers across Turkey, Syria, and the UK to build exceptional models.",
+    "team": "The Masterminds",
+    "teamSub": "/ Architects"
+  },
+  "contact": {
+    "headline": "STAY",
+    "headlineAccent": "TECHNICAL",
+    "description": "Ready to leave your mark? Let's discuss your next project and translate your vision into a technical autograph.",
+    "links": "Direct Links",
+    "locations": "Nodes / Locations",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "scope": "Project Scope",
+      "submit": "Transmit Message"
+    }
+  },
+  "footer": {
+    "tagline": "A Technical studio focused on design precision.",
+    "rights": "Mermez Lab. All rights reserved.",
+    "stayTechnical": "STAY TECHNICAL",
+    "licensed": "Licensed in Turkey, Syria, and United Kingdom"
+  },
+  "partners": {
+    "title": "Trusted Partners",
+    "subtitle": "Collective Intelligence",
+    "description": "Collaborating with global innovators to engineer the future of digital ecosystems."
+  },
+  "serviceNames": {
+    "marketplace-services": "Marketplace Solutions",
+    "ecommerce-services": "Ecommerce Development",
+    "erp-services": "ERP Systems",
+    "crm-services": "CRM Solutions",
+    "generative-ai": "Generative AI & LLM",
+    "ai-automation": "AI Automation",
+    "predictive-analytics": "Predictive Analytics",
+    "computer-vision": "Computer Vision"
+  },
+  "serviceDescriptions": {
+    "marketplace-services": "Integrate multi-vendor platforms to streamline vendor and marketplace operations efficiently.",
+    "ecommerce-services": "Enhance ecommerce platforms with seamless integrations, product management, reporting, and workflow optimization.",
+    "erp-services": "Connect enterprise resource planning systems to improve data flow and operational efficiency across all departments seamlessly.",
+    "crm-services": "Optimize customer relationship management systems to streamline workflows and improve customer engagement."
+  },
+  "seo": {
+    "home": {
+      "title": "Mermez Lab | Digital Innovation Studio & Technical Solutions",
+      "description": "Mermez Lab is a leading technical studio specializing in Marketplace, Ecommerce, ERP, and CRM solutions across Turkey, Syria, and the UK.",
+      "keywords": "technical studio, digital agency, ERP Syria, Ecommerce solutions Turkey, app development UK"
+    },
+    "about": {
+      "title": "About Us | Mermez Lab",
+      "description": "Meet the team and masterminds behind Mermez Lab, your full-service digital agency bridging precision engineering with visual art.",
+      "keywords": "about mermez, team, digital transformation, technical design agency"
+    },
+    "services": {
+      "title": "Our Services | Advanced Software Solutions",
+      "description": "Explore our competencies in UI design, systems architecture, and enterprise solution development including ERP, CRM, and Marketplaces.",
+      "keywords": "software services, web development, app coding, enterprise solutions"
+    },
+    "portfolio": {
+      "title": "Work | Innovative Projects",
+      "description": "See our selected works, including Rehalaty, XCASH, and IEDU, where we translate visions into unique technical autographs.",
+      "keywords": "portfolio, software projects, case studies, digital innovation"
+    },
+    "contact": {
+      "title": "Contact Us | Start Your Next Project",
+      "description": "Contact Mermez Lab today to discuss your technical project. We have offices in Turkey and Syria and are ready to work globally.",
+      "keywords": "contact us, project request, technical services, mermez office"
+    }
+  },
+  "aiSection": {
+    "tagline": "AI INTELLIGENCE NODE",
+    "headline": "WE ARE SHAPING",
+    "headlineAccent": "DIGITAL INTELLIGENCE",
+    "description": "At Mermez Lab, we are not just AI users—we are supporters, providers, and specialists in engineering intelligent systems. We integrate AI at the core of our projects to deliver solutions beyond boundaries.",
+    "manifesto": "AI-First Vision: We believe the future is built on data and machine learning. We are here to lead this transformation and empower businesses with sovereign and private AI tools.",
+    "pillars": {
+      "generative": "Generative Technologies",
+      "automation": "Intelligent Automation",
+      "predictive": "Predictive Data Analysis",
+      "vision": "Computer Vision Systems"
+    },
+    "cta": "Consult an AI Expert"
+  },
+  "projects": {
+    "rehalaty": {
+      "title": "REHALATY - Global Travel Platform",
+      "challenge": "Building a centralized booking system connecting thousands of vendors with low latency.",
+      "solution": "Developed a microservices-based infrastructure to ensure stability and massive scalability.",
+      "result": "40% increase in booking speed and 60% reduction in operational errors."
+    },
+    "xcash": {
+      "title": "XCASH - Digital Finance Infrastructure",
+      "challenge": "Providing highly secure payment gateways that comply with international standards.",
+      "solution": "Military-grade encryption engineering and multi-layer verification protocols.",
+      "result": "Processing over 1 million transactions monthly with 99.99% security uptime."
+    },
+    "iedu": {
+      "title": "IEDU - Future of Digital Education",
+      "challenge": "Transforming traditional education into an interactive digital experience for thousands of students.",
+      "solution": "Integrated LMS with AI-powered performance analytics and virtual classrooms.",
+      "result": "50% improvement in student engagement levels and streamlined staff management."
+    }
+  }
+}

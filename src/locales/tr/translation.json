@@ -1,0 +1,136 @@
+{
+  "nav": {
+    "home": "Anasayfa",
+    "work": "Çalışmalar",
+    "services": "Hizmetler",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "cta": "Projeye Başla"
+  },
+  "hero": {
+    "tagline": "Teknik Tasarım Stüdyosu",
+    "headline": "TEKNİK",
+    "headlineAccent": "İMZAYI",
+    "headlineEnd": "İŞLEMEK.",
+    "description": "Dijital çağ için mimari. Karmaşık mühendisliği, anlamlı etki ve küresel erişim sağlayan akıcı, insan odaklı arayüzlere dönüştürüyoruz.",
+    "cta": "Vaka Çalışmalarını Keşfet"
+  },
+  "sections": {
+    "works": "Seçilen Çalışmalar",
+    "worksSub": "/ 2024 Portfolyo",
+    "capabilities": "Temel Yetkinlikler",
+    "capabilitiesTitle": "GÖRÜNMEYEN KATMANLARI HACKLEMEK.",
+    "methodology": "Metodolojimiz",
+    "methodologyTitle": "BİR SANAT FORMU OLARAK VERİ.",
+    "methodologyDesc": "Teknik karmaşıklığı sadece gizlemiyoruz, onu kutluyoruz. Tasarımlarımız, otorite ve şeffaflık oluşturmak için teknik meta verileri dekoratif motifler olarak kullanır."
+  },
+  "about": {
+    "marqueeText": "HASSAS TASARIM • YAZILIM ÜSTÜNLÜĞÜ • DİJİTAL İNOVASYON • KÜRESEL VİZYON",
+    "headline": "MARKA",
+    "headlineAccent": "BULMACALARINIZI",
+    "description": "Mermez Lab, geleneksel bir ajans değildir; Türkiye, Suriye ve İngiltere'deki en iyi mühendis ve tasarımcıları bir araya getiren eksiksiz bir dijital laboratuvardır.",
+    "team": "Uzmanlar",
+    "teamSub": "/ İşbirlikçiler"
+  },
+  "contact": {
+    "headline": "TEKNİK",
+    "headlineAccent": "KALIN",
+    "description": "İzinizi bırakmaya hazır mısınız? Bir sonraki projenizi tartışalım ve vizyonunuzu teknik bir imzaya dönüştürelim.",
+    "links": "Doğrudan Bağlantılar",
+    "locations": "Nodlar / Konumlar",
+    "form": {
+      "name": "Ad Soyad",
+      "email": "E-posta Adresi",
+      "scope": "Proje Kapsamı",
+      "submit": "Mesajı Gönder"
+    }
+  },
+  "footer": {
+    "tagline": "Tasarım hassasiyetine odaklanmış teknik bir stüdyo.",
+    "rights": "Mermez Lab. Tüm hakları saklıdır.",
+    "stayTechnical": "TEKNİK KALIN",
+    "licensed": "Türkiye, Suriye ve Birleşik Krallık'ta lisanslıdır"
+  },
+  "partners": {
+    "title": "Başarı Ortakları",
+    "subtitle": "Kolektif Zeka",
+    "description": "Dijital ekosistemlerin geleceğini inşa etmek için küresel yenilikçilerle işbirliği yapıyoruz."
+  },
+  "serviceNames": {
+    "marketplace-services": "Pazaryeri Çözümleri",
+    "ecommerce-services": "E-ticaret Geliştirme",
+    "erp-services": "ERP Sistemleri",
+    "crm-services": "CRM Çözümleri",
+    "generative-ai": "Üretken AI ve LLM",
+    "ai-automation": "AI Otomasyonu",
+    "predictive-analytics": "Öngörücü Analitik",
+    "computer-vision": "Bilgisayarlı Görü"
+  },
+  "serviceDescriptions": {
+    "marketplace-services": "Satıcı ve pazaryeri operasyonlarını verimli bir şekilde düzenlemek için çok satıcılı platformları entegre edin.",
+    "ecommerce-services": "Kesintisiz entegrasyonlar, ürün yönetimi, raporlama ve iş akışı optimizasyonu ile e-ticaret platformlarını güçlendirin.",
+    "erp-services": "Tüm departmanlarda veri akışını ve operasyonel verimliliği sorunsuz bir şekilde artırmak için kurumsal kaynak planlama sistemlerini bağlayın.",
+    "crm-services": "İş akışlarını düzenlemek ve müşteri katılımını artırmak için müşteri ilişkileri yönetimi sistemlerini optimize edin."
+  },
+  "seo": {
+    "home": {
+      "title": "Mermez Lab | Dijital İnovasyon Stüdyosu ve Teknik Çözümler",
+      "description": "Mermez Lab; Türkiye, Suriye ve İngiltere'de Pazaryeri, E-ticaret, ERP ve CRM çözümleri konusunda uzmanlaşmış öncü bir teknik stüdyodur.",
+      "keywords": "teknik stüdyo, dijital ajans, ERP Suriye, E-ticaret çözümleri Türkiye, uygulama geliştirme İngiltere"
+    },
+    "about": {
+      "title": "Hakkımızda | Mermez Lab",
+      "description": "Hassas mühendisliği görsel sanatla birleştiren tam hizmet dijital ajansınız Mermez Lab'in arkasındaki ekiple ve dehalarla tanışın.",
+      "keywords": "mermez hakkında, ekip, dijital dönüşüm, teknik tasarım ajansı"
+    },
+    "services": {
+      "title": "Hizmetlerimiz | Gelişmiş Yazılım Çözümleri",
+      "description": "UI tasarımı, sistem mimarisi ve ERP, CRM ve Pazaryeri dahil kurumsal çözüm geliştirme yetkinliklerimizi keşfedin.",
+      "keywords": "yazılım hizmetleri, web geliştirme, uygulama kodlama, kurumsal çözümler"
+    },
+    "portfolio": {
+      "title": "Çalışmalar | Yenilikçi Projeler",
+      "description": "Vizyonları benzersiz teknik imzalara dönüştürdüğümüz Rehalaty, XCASH ve IEDU dahil olmak üzere seçilmiş çalışmalarımızı görün.",
+      "keywords": "portfolyo, yazılım projeleri, vaka çalışmaları, dijital inovasyon"
+    },
+    "contact": {
+      "title": "İletişim | Sonraki Projenize Başlayın",
+      "description": "Teknik projenizi tartışmak için bugün Mermez Lab ile iletişime geçin. Türkiye ve Suriye'de ofislerimiz bulunmaktadır.",
+      "keywords": "iletişim, proje talebi, teknik hizmetler, mermez ofisi"
+    }
+  },
+  "aiSection": {
+    "tagline": "AI ZEKA DÜĞÜMÜ",
+    "headline": "GELECEĞİN",
+    "headlineAccent": "DİJİTAL ZEKASINI",
+    "description": "Mermez Lab'de biz sadece AI kullanıcısı değiliz; akıllı sistemlerin mühendisliğinde destekçi, sağlayıcı ve uzmanız. Sınırların ötesinde çözümler sunmak için AI'yı projelerimizin merkezine entegre ediyoruz.",
+    "manifesto": "Önce AI Vizyonu: Geleceğin veri ve makine öğrenimi üzerine inşa edildiğine inanıyoruz. Bu dönüşüme liderليك etmek ve işletmeleri egemen ve özel AI araçlarıyla güçlendirmek için buradayız.",
+    "pillars": {
+      "generative": "Üretken Teknolojiler",
+      "automation": "Akıllı Otomasyon",
+      "predictive": "Öngörücü Veri Analizi",
+      "vision": "Bilgisayarlı Görü Sistemleri"
+    },
+    "cta": "Bir AI Uzmanına Danışın"
+  },
+  "projects": {
+    "rehalaty": {
+      "title": "REHALATY - Küresel Seyahat Platformu",
+      "challenge": "Binlerce tedarikçiyi düşük gecikme süresiyle bağlayan merkezi bir rezervasyon sistemi oluşturmak.",
+      "solution": "İstikrar ve devasa ölçeklenebilirlik sağlamak için mikro hizmet tabanlı bir altyapı geliştirildi.",
+      "result": "Rezervasyon hızında %40 artış ve operasyonel hatalarda %60 azalma."
+    },
+    "xcash": {
+      "title": "XCASH - Dijital Finans Altyapısı",
+      "challenge": "Uluslararası standartlarla uyumlu, son derece güvenli ödeme geçitleri sağlamak.",
+      "solution": "Askeri düzeyde şifreleme mühendisliği ve çok katmanlı doğrulama protokolleri.",
+      "result": "%99,99 güvenlik çalışma süresi ile ayda 1 milyondan fazla işlem gerçekleştiriliyor."
+    },
+    "iedu": {
+      "title": "IEDU - Dijital Eğitimin Geleceği",
+      "challenge": "Geleneksel eğitimi binlerce öğrenci için etkileşimli bir dijital deneyime dönüştürmek.",
+      "solution": "AI destekli performans analitiği ve sanal sınıflarla entegre LMS geliştirildi.",
+      "result": "Öğrenci bağlılık seviyelerinde %50 iyileşme ve personel yönetiminin basitleştirilmesi."
+    }
+  }
+}
